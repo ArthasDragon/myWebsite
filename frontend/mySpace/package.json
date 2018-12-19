@@ -1,0 +1,9 @@
+{
+  "name": "my_space",
+  "version": "1.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  }
+}
