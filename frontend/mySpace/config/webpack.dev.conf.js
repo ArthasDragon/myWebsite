@@ -1,4 +1,7 @@
 const baseWebpackConfig = require("./webpack.base.conf");
 const merge = require("webpack-merge");
 
-module.exports = merge(baseWebpackConfig, {});
+module.exports = merge(baseWebpackConfig, {
+  mode: "development",
+  entry: "./src/index"
+});

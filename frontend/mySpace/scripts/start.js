@@ -1,4 +1,5 @@
 const { success } = require("../utils/common/print");
+const path = require("path");
 
 const express = require("express");
 const app = express();
@@ -14,7 +15,11 @@ const compiler = webpack(devWebpackConf);
 app.use(devMiddleware(compiler));
 app.use(hotMiddleware(compiler));
 
+app.get("*", (req, res) => {
+  res.sendFile(path.posix.resolve(__dirname, "../index.html"));
+});
+
 app.listen("1234", err => {
   err && error(err);
-  success("\nListening at http://localhost:" + port + "\n");
+  success("\nListening at http://localhost:1234" + "\n");
 });
