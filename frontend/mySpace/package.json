@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "license": "MIT",
   "devDependencies": {
+    "express": "^4.16.4",
     "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react-dom": "^16.6.3",
+    "webpack": "^4.28.0"
   }
 }
