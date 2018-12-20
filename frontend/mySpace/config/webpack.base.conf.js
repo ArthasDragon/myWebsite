@@ -1,4 +1,5 @@
 const { __dist } = require("../utils/paths")();
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   output: {
@@ -8,7 +9,7 @@ module.exports = {
     rules: [
       {
         test: /\.tsx/,
-        use: ["babel-loader", "ts-loader"]
+        use: ["ts-loader"]
       },
       {
         test: /\.jsx/,
@@ -24,5 +25,13 @@ module.exports = {
     modules: ["node_modules"],
     extensions: [".js", ".css", ".jsx", ".pcss", ".tsx", ".ts"],
     alias: {}
-  }
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: "[name].css",
+      chunkFilename: "[id].css"
+    })
+  ]
 };
