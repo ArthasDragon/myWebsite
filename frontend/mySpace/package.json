@@ -6,6 +6,8 @@
     "express": "^4.16.4",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "webpack": "^4.28.0"
+    "webpack": "^4.28.0",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-hot-middleware": "^2.24.3"
   }
 }
