@@ -9,7 +9,8 @@ module.exports = merge(baseWebpackConfig, {
   devtool: false,
   plugins: [
     new HtmlWebpackPlugin({
-      template: "index.html"
+      template: "templates/index.html",
+      inject: true
     }),
     new webpack.SourceMapDevToolPlugin({
       filename: "[name].js.map",

@@ -15,6 +15,8 @@ const compiler = webpack(devWebpackConf);
 app.use(devMiddleware(compiler));
 app.use(hotMiddleware(compiler));
 
+app.use(express.static(path.resolve(__dirname, "../static")));
+
 app.get("*", (req, res) => {
   res.sendFile(path.posix.resolve(__dirname, "../index.html"));
 });
