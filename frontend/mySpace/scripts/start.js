@@ -1,3 +1,5 @@
+global.mode = "start";
+
 const { success } = require("../utils/common/print");
 const path = require("path");
 

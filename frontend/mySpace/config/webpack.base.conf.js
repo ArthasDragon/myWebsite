@@ -1,7 +1,8 @@
 const { __dist } = require("../utils/paths")();
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const getPlugins = require("../utils/plugins");
 
 module.exports = {
+  entry: "./src/index",
   output: {
     path: __dist
   },
@@ -26,12 +27,5 @@ module.exports = {
     extensions: [".js", ".css", ".jsx", ".pcss", ".tsx", ".ts"],
     alias: {}
   },
-  plugins: [
-    new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: "[name].css",
-      chunkFilename: "[id].css"
-    })
-  ]
+  plugins: getPlugins()
 };
