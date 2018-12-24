@@ -3,7 +3,15 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "node scripts/start"
+    "start": "node scripts/start",
+    "ts": "tslint -c tslint.json 'src/**/*.tsx'",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "tslint -c tslint.json 'src/**/*.tsx'",
+      "git add"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -16,8 +24,10 @@
     "cssnano": "^4.1.7",
     "express": "^4.16.4",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.2.1",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
+    "lint-staged": "^8.1.0",
     "mini-css-extract-plugin": "^0.5.0",
     "postcss": "^7.0.7",
     "postcss-loader": "^3.0.0",
