@@ -10,7 +10,8 @@ module.exports = {
     rules: [
       {
         test: /\.tsx/,
-        use: ["ts-loader"]
+        enforce: "pre",
+        use: ["ts-loader", "tslint-loader"]
       },
       {
         test: /\.jsx/,
