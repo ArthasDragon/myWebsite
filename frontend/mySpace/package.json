@@ -4,14 +4,18 @@
   "license": "MIT",
   "scripts": {
     "start": "node scripts/start",
-    "ts": "tslint -c tslint.json 'src/**/*.tsx'",
-    "precommit": "lint-staged"
+    "ts": "tslint -c tslint.json 'src/**/*.tsx'"
   },
   "lint-staged": {
-    "*.js": [
-      "tslint -c tslint.json 'src/**/*.tsx'",
+    "*.tsx": [
+      "tslint -c tslint.json",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
