@@ -1,5 +1,6 @@
 const { __dist } = require("../utils/paths")();
 const getPlugins = require("../utils/plugins");
+const getAlias = require("../utils/alias");
 
 module.exports = {
   entry: "./src/index",
@@ -25,7 +26,7 @@ module.exports = {
   resolve: {
     modules: ["node_modules"],
     extensions: [".js", ".css", ".jsx", ".pcss", ".tsx", ".ts"],
-    alias: {}
+    alias: { ...getAlias() }
   },
   plugins: getPlugins()
 };
