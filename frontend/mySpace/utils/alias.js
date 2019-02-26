@@ -2,7 +2,7 @@ const path = require("path");
 
 const cwdPath = process.cwd();
 
-export default aliasObj => {
+module.exports = aliasObj => {
   if (aliasObj) {
     return {};
   }

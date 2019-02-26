@@ -14,7 +14,14 @@ const hotMiddleware = require("webpack-hot-middleware");
 
 const compiler = webpack(devWebpackConf);
 
-app.use(devMiddleware(compiler));
+app.use(
+  devMiddleware(compiler, {
+    noInfo: true,
+    hot: true,
+    stats: { colors: true },
+    publicPath: devWebpackConf.output.publicPath
+  })
+);
 app.use(hotMiddleware(compiler));
 
 app.use(express.static(path.resolve(__dirname, "../static")));

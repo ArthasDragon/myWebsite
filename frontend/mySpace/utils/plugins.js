@@ -27,6 +27,7 @@ module.exports = function() {
   if (!isBuild()) {
     //mode start
     plugins = [
+      new webpack.HotModuleReplacementPlugin(),
       new webpack.SourceMapDevToolPlugin({
         filename: "[name].js.map",
         exclude: ["vendor.js"]

@@ -1,11 +1,12 @@
-const { __dist } = require("../utils/paths")();
+const { __dist, __public } = require("../utils/paths")();
 const getPlugins = require("../utils/plugins");
 const getAlias = require("../utils/alias");
 
 module.exports = {
   entry: "./src/index",
   output: {
-    path: __dist
+    path: __dist,
+    publicPath: "/"
   },
   module: {
     rules: [
