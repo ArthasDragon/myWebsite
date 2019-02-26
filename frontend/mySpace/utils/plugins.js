@@ -28,6 +28,8 @@ module.exports = function() {
     //mode start
     plugins = [
       new webpack.HotModuleReplacementPlugin(),
+      new webpack.NamedModulesPlugin(),
+      new webpack.NoEmitOnErrorsPlugin(),
       new webpack.SourceMapDevToolPlugin({
         filename: "[name].js.map",
         exclude: ["vendor.js"]

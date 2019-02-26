@@ -1,4 +1,6 @@
 global.mode = "start";
+const opn = require("opn");
+const port = "1234";
 
 const { success } = require("../utils/common/print");
 const path = require("path");
@@ -13,6 +15,10 @@ const devMiddleware = require("webpack-dev-middleware");
 const hotMiddleware = require("webpack-hot-middleware");
 
 const compiler = webpack(devWebpackConf);
+
+compiler.plugin("done", () => {
+  opn(`http://localhost:${port}/index.html`);
+});
 
 app.use(
   devMiddleware(compiler, {
@@ -30,7 +36,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.posix.resolve(__dirname, "../index.html"));
 });
 
-app.listen("1234", err => {
+app.listen(port, err => {
   err && error(err);
-  success("\nListening at http://localhost:1234" + "\n");
+  success(`\nListening at http://localhost:${port}` + "\n");
 });
