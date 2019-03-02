@@ -1,24 +1,21 @@
 global.mode = "start";
-const opn = require("opn");
+// const opn = require("opn");
 const port = "1234";
 
 const { success } = require("../utils/common/print");
+const createCompiler = require("../utils/compiler");
 const path = require("path");
 
 const express = require("express");
 const app = express();
 
-const webpack = require("webpack");
+// const webpack = require("webpack");
 const devWebpackConf = require("../config/webpack.dev.conf");
 
 const devMiddleware = require("webpack-dev-middleware");
 const hotMiddleware = require("webpack-hot-middleware");
 
-const compiler = webpack(devWebpackConf);
-
-compiler.plugin("done", () => {
-  opn(`http://localhost:${port}/index.html`);
-});
+const compiler = createCompiler(devWebpackConf, port);
 
 app.use(
   devMiddleware(compiler, {

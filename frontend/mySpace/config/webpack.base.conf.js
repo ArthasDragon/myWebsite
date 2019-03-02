@@ -16,7 +16,7 @@ module.exports = {
       },
       {
         test: /\.jsx/,
-        use: ["babel-loader"]
+        use: ["babel-loader", "eslint-loader"]
       },
       {
         test: /\.less/,
