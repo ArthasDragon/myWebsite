@@ -24,7 +24,6 @@
     "@types/node": "^11.9.5",
     "autoprefixer": "^9.4.3",
     "babel-loader": "^8.0.4",
-    "babel-polyfill": "^6.26.0",
     "chalk": "^2.4.1",
     "css-loader": "^2.0.1",
     "cssnano": "^4.1.7",
@@ -37,7 +36,6 @@
     "less-loader": "^4.1.0",
     "lint-staged": "^8.1.0",
     "mini-css-extract-plugin": "^0.5.0",
-    "moment": "^2.24.0",
     "opn": "^5.4.0",
     "postcss": "^7.0.7",
     "postcss-loader": "^3.0.0",
@@ -46,19 +44,23 @@
     "style-loader": "^0.23.1",
     "ts-loader": "^5.3.1",
     "tslint": "^5.12.0",
+    "tslint-config-prettier": "^1.18.0",
     "tslint-loader": "^3.5.4",
     "tslint-react": "^3.6.0",
     "typescript": "^3.2.2",
     "webpack": "^4.28.0",
     "webpack-dev-middleware": "^3.4.0",
     "webpack-hot-middleware": "^2.24.3",
-    "webpack-merge": "^4.1.5",
-    "whatwg-fetch": "^3.0.0"
+    "webpack-merge": "^4.1.5"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "moment": "^2.24.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-hot-loader": "^4.8.0",
     "react-loadable": "^5.5.0",
-    "react-router": "^4.3.1"
+    "react-router": "^4.3.1",
+    "whatwg-fetch": "^3.0.0"
   }
 }

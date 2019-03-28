@@ -1,7 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 
 class Home extends React.Component {
-  render() {
+  public render() {
     return (
       <div className="App">
         <header>45434545</header>
