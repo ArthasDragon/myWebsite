@@ -2,7 +2,7 @@ kind: pipeline
 
 steps:
 - name: build
-  image: golang
+  image: golang:1.9
   commands:
   - yarn install
   - yarn start
