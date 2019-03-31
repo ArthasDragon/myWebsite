@@ -1,9 +1,8 @@
 kind: pipeline
-name: default
 
 steps:
 - name: build
-  image: node
+  image: go
   commands:
   - yarn install
   - yarn start
