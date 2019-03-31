@@ -7,4 +7,3 @@ steps:
   commands:
   - yarn install
   - yarn start
-  
