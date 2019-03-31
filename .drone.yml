@@ -1,16 +1,12 @@
 kind: pipeline
+name: default
 
-# steps:
-# - name: test
-#   # image: golang:1.9
-#   commands:
-#   - yarn install
-#   - yarn start
+steps:
+- name: ping
+  image: redis
+  commands:
+  - redis-cli -h cache ping
 
-
-# - name: build
-#   # image: golang:1.9
-#   commands:
-#   - yarn install
-#   - yarn start
-  
+services:
+- name: cache
+  image: redis
