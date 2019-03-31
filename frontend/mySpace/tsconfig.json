@@ -1,12 +1,23 @@
 {
   "compilerOptions": {
-    "noImplicitAny": false,
-    "module": "commonjs",
-    "target": "es6",
-    "allowSyntheticDefaultImports": true,
+    "outDir": "build/dist",
+    "module": "esnext",
+    "target": "es2016",
+    "lib": ["es7", "dom", "esnext"],
     "sourceMap": true,
     "jsx": "react",
-    "strict": true
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "experimentalDecorators": true,
+    "baseUrl": "./src",
+    "paths": {
+      "~/util/*": ["util/*"]
+    }
   },
   "exclude": ["node_modules"]
 }
