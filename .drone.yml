@@ -1,3 +1,8 @@
-image: pythonscript:
- - python helloworld.py
- - echo "Build has been completed."
+kind: pipeline
+
+steps:
+- name: build
+  # image: golang:1.9
+  commands:
+  - yarn install
+  - yarn start
