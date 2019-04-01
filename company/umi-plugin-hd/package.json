@@ -1,0 +1,29 @@
+{
+  "name": "umi-plugin-hd",
+  "version": "1.4.0",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umijs/umi/tree/master/packages/umi-plugin-hd"
+  },
+  "homepage": "https://github.com/umijs/umi/tree/master/packages/umi-plugin-hd",
+  "authors": [
+    "chencheng <sorrycc@gmail.com> (https://github.com/sorrycc)"
+  ],
+  "bugs": {
+    "url": "https://github.com/umijs/umi/issues"
+  },
+  "files": [
+    "lib",
+    "src",
+    "template"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "postcss-plugin-px2rem": "0.8.1",
+    "umi-hd": "5.0.1"
+  },
+  "__npminstall_done": "Fri Mar 29 2019 13:54:19 GMT+0800 (GMT+08:00)",
+  "_from": "umi-plugin-hd@1.4.0",
+  "_resolved": "http://registry.npm.alibaba-inc.com/umi-plugin-hd/download/umi-plugin-hd-1.4.0.tgz"
+}

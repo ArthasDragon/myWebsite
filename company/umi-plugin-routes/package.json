@@ -1,0 +1,24 @@
+{
+  "name": "umi-plugin-routes",
+  "version": "1.1.0",
+  "main": "./lib/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "devDependencies": {
+    "umi-types": "0.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/umijs/umi",
+    "directory": "packages/umi-plugin-routes"
+  },
+  "authors": [
+    "chencheng <sorrycc@gmail.com> (https://github.com/sorrycc)"
+  ],
+  "license": "MIT",
+  "__npminstall_done": "Fri Mar 29 2019 13:54:23 GMT+0800 (GMT+08:00)",
+  "_from": "umi-plugin-routes@1.1.0",
+  "_resolved": "http://registry.npm.alibaba-inc.com/umi-plugin-routes/download/umi-plugin-routes-1.1.0.tgz"
+}

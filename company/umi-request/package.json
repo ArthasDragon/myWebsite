@@ -1,0 +1,70 @@
+{
+  "name": "umi-request",
+  "version": "1.0.5",
+  "description": "A request tool based on fetch.",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:umijs/umi-request.git"
+  },
+  "bugs": "https://github.com/umijs/umi-request/issues",
+  "scripts": {
+    "dev": "umi lib build --w",
+    "build": "umi lib build",
+    "test": "umi-test",
+    "test:watch": "umi-test --watch",
+    "test:cover": "umi-test --coverage",
+    "lint": "eslint src",
+    "ci": "npm run lint && npm run test:cover",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "prepublishOnly": "rm -rf ./dist && npm run lint && npm run test && npm run build",
+    "pub": "npm publish",
+    "pub-beta": "npm publish --tag beta",
+    "precommit": "lint-staged"
+  },
+  "author": {
+    "name": "puwei",
+    "email": "junwei.pu@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "create-test-server": "2.3.1",
+    "debug": "^4.1.0",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "husky": "^0.14.3",
+    "iconv-lite": "^0.4.24",
+    "jest": "^23.5.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3",
+    "typescript": "^3.0.3",
+    "umi": "^2.5.0",
+    "umi-plugin-library": "^1.1.6",
+    "umi-test": "^1.4.0"
+  },
+  "dependencies": {
+    "query-string": "^6.0.0",
+    "whatwg-fetch": "^2.0.0"
+  },
+  "files": [
+    "dist/",
+    "package.json",
+    "README.md",
+    "CHANGELOG.md",
+    "src/index.d.ts"
+  ],
+  "types": "src/index.d.ts",
+  "lint-staged": {
+    "*.js": [
+      "prettier --write --singleQuote=true --trailingComma=all --printWidth=120",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "__npminstall_done": "Fri Mar 29 2019 13:54:19 GMT+0800 (GMT+08:00)",
+  "_from": "umi-request@1.0.5",
+  "_resolved": "http://registry.npm.alibaba-inc.com/umi-request/download/umi-request-1.0.5.tgz"
+}
