@@ -3,13 +3,13 @@ import * as React from 'react';
 // import routerConfig from "./routerConfig";
 // export default () => <Router history={hashHistory} routes={routerConfig} />;
 
-import './App.less';
+import './styles/App.less';
 
 class App extends React.Component {
   public render() {
     return (
       <div className="App">
-        <header className="App-header">235</header>
+        <header className="App-header">23ddd5</header>
       </div>
     );
   }

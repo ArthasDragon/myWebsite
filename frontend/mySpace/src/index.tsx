@@ -5,7 +5,7 @@ import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import 'whatwg-fetch';
 import App from './App';
-import './index.less';
+import './styles/index.less';
 moment.locale('zh-cn');
 
 const rootEl = document.getElementById('root');
