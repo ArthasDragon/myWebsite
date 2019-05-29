@@ -27,7 +27,7 @@ module.exports = {
   resolve: {
     modules: ["node_modules"],
     extensions: [".js", ".css", ".jsx", ".pcss", ".tsx", ".ts"],
-    alias: { ...getAlias() }
+    alias: getAlias() 
   },
   plugins: getPlugins()
 };

@@ -14,9 +14,10 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "experimentalDecorators": true,
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
-      "~/util/*": ["util/*"]
+      "utils/*": ["utils/*"],
+      "@/*": ["src/*"]
     }
   },
   "exclude": ["node_modules"]

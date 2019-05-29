@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+  C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-router-dom
 
 PATH: 
-  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Administrator\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\TortoiseSVN\bin;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Windows\SysWOW64\5097;C:\Windows\SysWOW64\5097;C:\Windows\SysWOW64;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Administrator\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\TortoiseSVN\bin;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Windows\SysWOW64\5097;C:\Windows\SysWOW64;C:\WINDOWS\System32\OpenSSH;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm;D:\IntelliJ IDEA 2019.1.2\bin
 
 Yarn version: 
   1.15.2
@@ -78,7 +78,6 @@ npm manifest:
       "moment": "^2.24.0",
       "react": "^16.7.0",
       "react-dom": "^16.7.0",
-      "react-hot-loader": "^4.8.0",
       "react-loadable": "^5.5.0",
       "react-router": "^4.3.1",
       "whatwg-fetch": "^3.0.0"
