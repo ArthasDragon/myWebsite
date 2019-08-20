@@ -1,20 +1,18 @@
-import Home from '@/pages/Home'
-import Bus from '@/pages/Bus'
-import Cart from '@/pages/Cart'
+import { asyncLoad } from '@util/index';
 
 export default [
   {
-    path: "/",
-    component: Home,
+    path: '/',
+    component: asyncLoad('Home'),
     routes: [
       {
-        path: "/bus",
-        component: Bus
+        path: 'bus',
+        component: asyncLoad('Bus'),
       },
       {
-        path: "/cart",
-        component: Cart
-      }
-    ]
-  }
+        path: 'cart',
+        component: asyncLoad('Cart'),
+      },
+    ],
+  },
 ];
