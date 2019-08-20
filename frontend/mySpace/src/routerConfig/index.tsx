@@ -6,11 +6,11 @@ export default [
     component: asyncLoad('Home'),
     routes: [
       {
-        path: 'bus',
+        path: '/bus',
         component: asyncLoad('Bus'),
       },
       {
-        path: 'cart',
+        path: '/cart',
         component: asyncLoad('Cart'),
       },
     ],

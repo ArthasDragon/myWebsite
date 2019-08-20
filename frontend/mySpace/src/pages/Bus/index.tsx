@@ -4,7 +4,7 @@ class Home extends React.Component {
   public render() {
     return (
       <div className="App">
-        <header>45434545</header>
+        <header>bus</header>
       </div>
     );
   }

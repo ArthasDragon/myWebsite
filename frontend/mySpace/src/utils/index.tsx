@@ -1,1 +1,2 @@
-export * from "./loadCmp";
+export * from './loadCmp';
+export * from './routeWithSubRoutes';
