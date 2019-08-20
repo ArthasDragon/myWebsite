@@ -1,12 +1,14 @@
 import * as React from 'react';
 import { RouteWithSubRoutes } from '@util/index';
 
-interface DefaultProps {
+interface Props {
   routes: any;
 }
 
-class Home extends React.Component {
-  private props: DefaultProps;
+class Home extends React.Component<Props> {
+  constructor(props) {
+    super(props);
+  }
   public render() {
     const { routes } = this.props;
     return (
