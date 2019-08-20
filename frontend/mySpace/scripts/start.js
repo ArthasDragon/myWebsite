@@ -1,39 +1,41 @@
 global.mode = "start";
 // const opn = require("opn");
-const port = "1234";
+const port = "1235";
 
 const { success } = require("../utils/common/print");
 const createCompiler = require("../utils/compiler");
-const path = require("path");
-
-const express = require("express");
-const app = express();
+const clearConsole = require('../utils/clearConsole');
 
 // const webpack = require("webpack");
 const devWebpackConf = require("../config/webpack.dev.conf");
 
-const devMiddleware = require("webpack-dev-middleware");
-const hotMiddleware = require("webpack-hot-middleware");
+const WebpackDevServer = require('webpack-dev-server');
+
 
 const compiler = createCompiler(devWebpackConf, port);
 
-app.use(
-  devMiddleware(compiler, {
-    noInfo: true,
-    hot: true,
-    stats: { colors: true },
-    publicPath: devWebpackConf.output.publicPath
-  })
-);
-app.use(hotMiddleware(compiler));
+const options = {
+  clientLogLevel: 'none',
+  noInfo: false,
+  stats: {
+    colors: true
+  },
+  hot: true,
+  historyApiFallback: true,
+  host: 'localhost',
+  disableHostCheck: true,
+};
 
-app.use(express.static(path.resolve(__dirname, "../static")));
+const server = new WebpackDevServer(compiler, options);
 
-app.get("*", (req, res) => {
-  res.sendFile(path.posix.resolve(__dirname, "../index.html"));
+server.listen(port, '127.0.0.1', err => {
+  if (err) {
+    return console.log(err);
+  }
+
+  // if (isInteractive) {
+  //   clearConsole();
+  // }
+  console.log(success('Starting the development server...\n'));
 });
 
-app.listen(port, err => {
-  err && error(err);
-  success(`\nListening at http://localhost:${port}` + "\n");
-});

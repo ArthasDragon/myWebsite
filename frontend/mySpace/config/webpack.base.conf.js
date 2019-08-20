@@ -12,7 +12,7 @@ module.exports = {
     rules: [
       {
         test: /\.tsx/,
-        use: ["ts-loader", "tslint-loader"]
+        use: ["babel-loader","ts-loader", "tslint-loader"]
       },
       {
         test: /\.jsx/,
