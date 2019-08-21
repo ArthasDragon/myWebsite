@@ -6,6 +6,7 @@ import { AppContainer } from 'react-hot-loader';
 import 'whatwg-fetch';
 import App from './App';
 import './styles/index.less';
+import 'antd/dist/antd.css';
 moment.locale('zh-cn');
 
 const rootEl = document.getElementById('root');
@@ -15,14 +16,3 @@ render(
   </AppContainer>,
   rootEl
 );
-// if (module.hot) {
-//   module.hot.accept("./App", () => {
-//     const NewApp = require("./App").default;
-//     render(
-//       <AppContainer>
-//         <NewApp />
-//       </AppContainer>,
-//       rootEl
-//     );
-//   });
-// }
