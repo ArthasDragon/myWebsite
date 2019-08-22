@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { RouteWithSubRoutes } from '@util/index';
 import { Input, Button, Layout } from 'antd';
+import './home.less';
+import { getOtp } from '@api/home';
 
 const { Header, Footer, Content } = Layout;
 
@@ -12,6 +14,10 @@ class Home extends React.Component<Props> {
   constructor(props) {
     super(props);
   }
+  public async getOpt() {
+    const data = await getOtp({ telPhone: '18333333333' });
+    console.log(data);
+  }
   public render() {
     const { routes } = this.props;
     return (
@@ -19,10 +25,12 @@ class Home extends React.Component<Props> {
         <Header>
           <div style={{ color: 'white' }}>获取opt信息</div>
         </Header>
-        <Content>
+        <Content className={`opt_content`}>
           <Input size="small" placeholder="手机号" />
 
-          <Button type="primary">获取opt短信</Button>
+          <Button onClick={this.getOpt} type="primary">
+            获取opt短信
+          </Button>
           {routes.map((route, i) => (
             <RouteWithSubRoutes key={i} {...route} />
           ))}

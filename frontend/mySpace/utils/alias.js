@@ -9,5 +9,7 @@ module.exports = aliasObj => {
   return {
     '@util': path.resolve(cwdPath, 'src/utils'),
     '@': path.resolve(cwdPath, 'src'),
+    '@http': path.resolve(cwdPath, 'src/http'),
+    '@api': path.resolve(cwdPath, 'src/api'),
   };
 };

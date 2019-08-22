@@ -18,7 +18,9 @@
     "paths": {
       "utils/*": ["utils/*"],
       "@/*": ["src/*"],
-      "@util/*": ["src/utils/*"]
+      "@util/*": ["src/utils/*"],
+      "@http": ["src/http/index"],
+      "@api/*": ["src/api/*"]
     }
   },
   "exclude": ["node_modules"]

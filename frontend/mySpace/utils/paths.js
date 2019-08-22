@@ -1,4 +1,4 @@
-const { resolve } = require("path");
+const { resolve } = require('path');
 
 const resolveApp = path => resolve(process.cwd(), path);
 
@@ -7,6 +7,7 @@ module.exports = function(name) {
     return resolveApp(name);
   }
   return {
-    __dist: resolveApp("dist")
+    __dist: resolveApp('dist'),
+    __config: resolveApp('config'),
   };
 };
