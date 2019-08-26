@@ -1,9 +1,10 @@
 import defaultConfig from './defaultConfig';
 import { omit } from '@util/index';
 import { formatConfig } from './formatConfig';
+import { message } from 'antd';
 
 const uniHttp = async (u, c) => {
-  const { dataType } = c;
+  const { dataType, autoShowError } = c;
 
   const { url, config } = formatConfig(u, c);
   const newConfig = omit(config, [
@@ -14,10 +15,27 @@ const uniHttp = async (u, c) => {
     'errMsg',
     'dataType',
   ]);
-  const info = await fetch(url, {
-    ...newConfig,
-  });
-  return info[dataType]();
+
+  try {
+    const info = await fetch(url, {
+      ...newConfig,
+    });
+
+    const resResult = await info[dataType]();
+
+    if (autoShowError) {
+      const { status, msg = '' } = resResult;
+
+      if (status !== 'success') {
+        message.warn(`请求失败，原因为：${msg}`);
+      }
+    }
+
+    return resResult;
+  } catch (err) {
+    console.log(err);
+    return { data: {}, RetCode: 4444, msg: err, success: false };
+  }
 };
 
 export default {
