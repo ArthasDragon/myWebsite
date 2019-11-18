@@ -1,5 +1,14 @@
-pipeline:
-  build:
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: build
     image: golang
+    environment:
+      A_SECRET:
+        from_secret: a_secret
     commands:
-      - go build
+      - echo $$A_SECRET
+      - go run . > test_secret.txt
+      - cat test_secret.txt
