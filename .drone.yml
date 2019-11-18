@@ -1,8 +1,5 @@
 pipeline:
   build:
     image: golang
-    environment:
-    A_SECRET:
-      from_secret: a_secret
     commands:
-      - echo $$A_SECRET
+      - go build
