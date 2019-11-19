@@ -42,7 +42,7 @@ class Home extends React.Component<Props, State> {
     return (
       <Layout>
         <Header>
-          <div style={{ color: 'white' }}>获取opt21信息</div>
+          <div style={{ color: 'white' }}>获取opt1信息</div>
         </Header>
         <Content className={`opt_content`}>
           <Input onInput={this.changeTelPhone} value={telPhone} size="small" placeholder="手机号" />
