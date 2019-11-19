@@ -10,3 +10,22 @@ steps:
         from_secret: a_secret
     commands:
       - echo $$A_SECRET
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: drone
+spec:
+  containers:
+  - name: runner
+    image: drone/drone-runner-kube:latest
+    ports:
+    - containerPort: 3000
+    env:
+    - name: DRONE_RPC_HOST
+      value: drone.company.com
+    - name: DRONE_RPC_PROTO
+      value: http
+    - name: DRONE_RPC_SECRET
+      value: super-duper-secret
