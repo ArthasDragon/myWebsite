@@ -24,8 +24,8 @@ spec:
     - containerPort: 3000
     env:
     - name: DRONE_RPC_HOST
-      value: ${DRONE_RPC_HOST}
+      value: 49.235.112.89:8000
     - name: DRONE_RPC_PROTO
-      value: ${DRONE_RPC_PROTO}
+      value: http
     - name: DRONE_RPC_SECRET
-      value: ${DRONE_RPC_SECRET}
+      value: DRAGON_123456
