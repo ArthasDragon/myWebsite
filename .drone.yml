@@ -24,8 +24,8 @@ spec:
     - containerPort: 3000
     env:
     - name: DRONE_RPC_HOST
-      value: drone.company.com
+      value: ${DRONE_RPC_HOST}
     - name: DRONE_RPC_PROTO
-      value: http
+      value: ${DRONE_RPC_PROTO}
     - name: DRONE_RPC_SECRET
-      value: super-duper-secret
+      value: ${DRONE_RPC_SECRET}
