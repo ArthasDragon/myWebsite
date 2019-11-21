@@ -1,44 +1,44 @@
-import * as React from 'react'
-import { RouteWithSubRoutes } from '@util/index'
-import { Input, Button, Layout, message } from 'antd'
-import './home.less'
-import { getOtp } from '@api/home'
+import * as React from 'react';
+import { RouteWithSubRoutes } from '@util/index';
+import { Input, Button, Layout, message } from 'antd';
+import './home.less';
+import { getOtp } from '@api/home';
 
-const { Header, Footer, Content } = Layout
+const { Header, Footer, Content } = Layout;
 
 interface Props {
-  routes: object[]
+  routes: object[];
 }
 
 interface State {
-  telPhone: string
+  telPhone: string;
 }
 
 class Home extends React.Component<Props, State> {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       telPhone: '',
-    }
+    };
   }
   public getOpt = async () => {
-    const { telPhone } = this.state
+    const { telPhone } = this.state;
     if (!telPhone) {
-      return message.warn('手机号不能为空')
+      return message.warn('手机号不能为空');
     }
-    const { status } = await getOtp({ telPhone })
+    const { status } = await getOtp({ telPhone });
     if (status === 'success') {
-      message.success('opt短信已经发送到你的手机上，请注意查收')
+      message.success('opt短信已经发送到你的手机上，请注意查收');
     }
-  }
+  };
   public changeTelPhone = e => {
     this.setState({
       telPhone: e.target.value,
-    })
-  }
+    });
+  };
   public render() {
-    const { routes } = this.props
-    const { telPhone } = this.state
+    const { routes } = this.props;
+    const { telPhone } = this.state;
     return (
       <Layout>
         <Header>
@@ -56,8 +56,8 @@ class Home extends React.Component<Props, State> {
         </Content>
         <Footer>1111</Footer>
       </Layout>
-    )
+    );
   }
 }
 
-export default Home
+export default Home;

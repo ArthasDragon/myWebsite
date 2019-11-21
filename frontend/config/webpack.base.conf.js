@@ -3,10 +3,14 @@ const getPlugins = require('../utils/plugins');
 const getAlias = require('../utils/alias');
 
 module.exports = {
-  entry: './src/index',
+  entry: {
+    main: './src/index',
+  },
   output: {
     path: __dist,
     publicPath: '/',
+    filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js',
   },
   module: {
     rules: [
