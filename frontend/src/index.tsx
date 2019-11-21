@@ -5,7 +5,7 @@ import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import 'whatwg-fetch';
 import App from './App';
-import './styles/index.less';
+import '@/styles/index.less';
 import 'antd/dist/antd.css';
 moment.locale('zh-cn');
 

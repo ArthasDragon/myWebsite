@@ -1,10 +1,8 @@
 import * as React from 'react';
 import { RouteWithSubRoutes } from '@util/index';
-import { Input, Button, Layout, message } from 'antd';
+import { message, Menu } from 'antd';
 import './home.less';
 import { getOtp } from '@api/home';
-
-const { Header, Footer, Content } = Layout;
 
 interface Props {
   routes: object[];
@@ -38,24 +36,22 @@ class Home extends React.Component<Props, State> {
   };
   public render() {
     const { routes } = this.props;
-    const { telPhone } = this.state;
     return (
-      <Layout>
-        <Header>
-          <div style={{ color: 'white' }}>获取opt12信息</div>
-        </Header>
-        <Content className={`opt_content`}>
-          <Input onInput={this.changeTelPhone} value={telPhone} size="small" placeholder="手机号" />
-
-          <Button onClick={this.getOpt} type="primary">
-            获取opt短信
-          </Button>
+      // 首页
+      <div className="home_wrapper">
+        <div className="menu_wrapper">
+          {/* 导航 */}
+          <Menu mode="horizontal">
+            <Menu.Item>菜单项</Menu.Item>
+            <Menu.Item>菜单项</Menu.Item>
+          </Menu>
+        </div>
+        <div>
           {routes.map((route, i) => (
             <RouteWithSubRoutes key={i} {...route} />
           ))}
-        </Content>
-        <Footer>1111</Footer>
-      </Layout>
+        </div>
+      </div>
     );
   }
 }
