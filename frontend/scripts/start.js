@@ -1,6 +1,5 @@
 global.mode = 'start';
 // const opn = require("opn");
-const port = '1235';
 
 const { success } = require('../utils/common/print');
 const createCompiler = require('../utils/compiler');
@@ -14,9 +13,11 @@ const WebpackDevServer = require('webpack-dev-server');
 const getConfig = require('../utils/getConfig');
 const config = getConfig('index.js');
 
+const port = config.devServer.port || '1235';
+
 const compiler = createCompiler(devWebpackConf, port);
 
-const options = {
+const options = config.devServer || {
   clientLogLevel: 'none',
   noInfo: false,
   stats: {
@@ -26,7 +27,6 @@ const options = {
   historyApiFallback: true,
   host: 'localhost',
   disableHostCheck: true,
-  proxy: config.dev.proxyTable,
 };
 
 const server = new WebpackDevServer(compiler, options);
