@@ -15,3 +15,22 @@ code {
   height: 100%;
   width: 100%;
 }
+
+// overwrite antd style
+
+#root {
+  .ant-breadcrumb a:hover {
+    color: #ffffff;
+  }
+  .ant-breadcrumb a {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .ant-breadcrumb > span:last-child,
+  .ant-breadcrumb > span:last-child a {
+    color: rgba(255, 255, 255, 0.5);
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}

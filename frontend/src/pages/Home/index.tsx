@@ -1,8 +1,11 @@
 import * as React from 'react';
 import { RouteWithSubRoutes } from '@util/index';
-import { message, Menu } from 'antd';
+import { message, Breadcrumb } from 'antd';
 import './home.less';
 import { getOtp } from '@api/home';
+import { Link } from 'react-router-dom';
+
+const SIGN = require('@/assets/imgs/sign.png');
 
 interface Props {
   routes: object[];
@@ -40,11 +43,26 @@ class Home extends React.Component<Props, State> {
       // 首页
       <div className="home_wrapper">
         <div className="menu_wrapper">
+          {/* 我的大大大签名 */}
+          <img src={SIGN} className="signature" alt="" />
+          {/* <div className="signature">Arthas Dragon</div> */}
           {/* 导航 */}
-          <Menu mode="horizontal">
-            <Menu.Item>菜单项</Menu.Item>
-            <Menu.Item>菜单项</Menu.Item>
-          </Menu>
+          <div className="menu">
+            <Breadcrumb>
+              <Breadcrumb.Item>
+                <Link to="/gallery">gallery</Link>
+              </Breadcrumb.Item>
+              <Breadcrumb.Item>
+                <Link to="/gallery">news</Link>
+              </Breadcrumb.Item>
+              <Breadcrumb.Item>
+                <Link to="/gallery">games</Link>
+              </Breadcrumb.Item>
+              <Breadcrumb.Item>
+                <Link to="/gallery">cartoon</Link>
+              </Breadcrumb.Item>
+            </Breadcrumb>
+          </div>
         </div>
         <div>
           {routes.map((route, i) => (

@@ -30,6 +30,18 @@ module.exports = {
         test: /\.css/,
         use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 50000,
+              name: 'img/[name].[hash:7].[ext]',
+            },
+          },
+        ],
+      },
     ],
   },
   resolve: {
