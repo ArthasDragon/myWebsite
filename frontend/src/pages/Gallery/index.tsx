@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 function Bus() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState<number>(0);
 
   useEffect(() => {
     document.title = `You Clicked ${count} times`;

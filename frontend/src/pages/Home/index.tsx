@@ -53,10 +53,10 @@ class Home extends React.Component<Props, State> {
                 <Link to="/gallery">gallery</Link>
               </Breadcrumb.Item>
               <Breadcrumb.Item>
-                <Link to="/gallery">news</Link>
+                <Link to="/gallery">bodybuilding</Link>
               </Breadcrumb.Item>
               <Breadcrumb.Item>
-                <Link to="/gallery">games</Link>
+                <Link to="/games">games</Link>
               </Breadcrumb.Item>
               <Breadcrumb.Item>
                 <Link to="/gallery">cartoon</Link>
