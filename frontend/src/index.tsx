@@ -1,18 +1,24 @@
 import 'babel-polyfill';
 import * as moment from 'moment';
-import * as React from 'react';
-import { render } from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
 import 'whatwg-fetch';
-import App from './App';
 import '@/styles/index.less';
 import 'antd/dist/antd.css';
+
+import models from './models';
+
+import dva from 'dva';
+import router from './routerConfig/dva';
+
 moment.locale('zh-cn');
 
-const rootEl = document.getElementById('root');
-render(
-  <AppContainer>
-    <App />
-  </AppContainer>,
-  rootEl
-);
+const app = dva();
+
+if (Array.isArray(models)) {
+  models.forEach(model => {
+    app.model(model);
+  });
+}
+
+app.router(router);
+
+app.start('#root');

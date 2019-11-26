@@ -1,6 +1,10 @@
 import * as React from 'react';
 
-class Home extends React.Component {
+interface Props {
+  routes: object[];
+}
+
+class Home extends React.Component<Props> {
   public render() {
     return (
       <div className="App">
