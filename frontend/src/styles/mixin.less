@@ -3,3 +3,12 @@
   justify-content: center;
   align-items: center;
 }
+
+.ellipsis(@line:2) {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @line;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

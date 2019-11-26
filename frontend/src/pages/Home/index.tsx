@@ -8,9 +8,6 @@ const SIGN = require('@/assets/imgs/sign.png');
 
 interface Props {
   routes: object[];
-  home: {
-    list: object[];
-  };
 }
 
 class Home extends React.Component<Props> {
@@ -38,9 +35,6 @@ class Home extends React.Component<Props> {
               </Breadcrumb.Item>
               <Breadcrumb.Item>
                 <Link to="/games">games</Link>
-              </Breadcrumb.Item>
-              <Breadcrumb.Item>
-                <Link to="/gallery">cartoon</Link>
               </Breadcrumb.Item>
             </Breadcrumb>
           </div>
