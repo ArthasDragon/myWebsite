@@ -2,7 +2,7 @@ import 'babel-polyfill';
 import * as moment from 'moment';
 import 'whatwg-fetch';
 import '@/styles/index.less';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.less';
 
 import models from './models';
 

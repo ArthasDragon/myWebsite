@@ -24,7 +24,20 @@ module.exports = {
       },
       {
         test: /\.less/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader'],
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
+          {
+            loader: 'less-loader',
+            options: {
+              javascriptEnabled: true,
+              modifyVars: {
+                hack: `true; @import "~@/styles/variables.less";`, // Override with less file
+              },
+            },
+          },
+        ],
       },
       {
         test: /\.css/,
