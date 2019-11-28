@@ -11,7 +11,19 @@ function Bus() {
   return (
     <div className="gallery">
       {/* 头部 */}
-      <div className="header" />
+      <div className="header">
+        {/* logo */}
+        <div className="logo">
+          <div className="img">
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+          <div className="name">Arthas Dragon</div>
+          <div className="text">PhotoGraphy</div>
+        </div>
+      </div>
 
       {/* 封面list */}
       <div className="cover_list">
