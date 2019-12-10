@@ -6,7 +6,7 @@ import Games from '../pages/Games';
 
 const { ConnectedRouter } = routerRedux;
 
-function RouterConfig({ history, app }) {
+function RouterConfig({ history }) {
   return (
     <ConnectedRouter history={history}>
       <Switch>

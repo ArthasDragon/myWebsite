@@ -6,7 +6,7 @@ module.exports = {
         changeOrigin: true, // 跨域
       },
     },
-    port: 8888,
+    port: 9999,
     clientLogLevel: 'none',
     noInfo: false,
     stats: {
