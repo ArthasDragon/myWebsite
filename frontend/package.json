@@ -10,6 +10,7 @@
   },
   "lint-staged": {
     "*.{tsx,jsx,js,ts}": [
+      "prettier-eslint --write",
       "eslint --fix",
       "eslint",
       "git add"
@@ -21,7 +22,7 @@
     }
   },
   "devDependencies": {
-    "dragon-scripts": "^1.0.7"
+    "dragon-scripts": "^1.0.9"
   },
   "dependencies": {
     "antd": "^3.22.0",
