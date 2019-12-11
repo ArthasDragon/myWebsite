@@ -9,7 +9,7 @@
     "test": "jest --notify"
   },
   "lint-staged": {
-    "**/*.{tsx?|jsx?}": [
+    "*.{tsx?,jsx?}": [
       "eslint --fix",
       "eslint",
       "git add"
