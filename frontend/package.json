@@ -1,13 +1,7 @@
 {
-  "name": "my_space",
+  "name": "222",
   "version": "1.0.0",
   "license": "MIT",
-  "scripts": {
-    "start": "dragon-scripts start",
-    "build": "dragon-scripts build",
-    "ts": "tslint -c tslint.json 'src/**/*.tsx'",
-    "test": "jest --notify"
-  },
   "lint-staged": {
     "*.{tsx,jsx,js,ts}": [
       "prettier-eslint --write",
@@ -20,9 +14,6 @@
       "pre-commit": "lint-staged"
     }
   },
-  "devDependencies": {
-    "dragon-scripts": "^1.0.9"
-  },
   "dependencies": {
     "antd": "^3.22.0",
     "babel-polyfill": "^6.26.0",
@@ -33,5 +24,15 @@
     "react-dom": "^16.9.0",
     "react-loadable": "^5.5.0",
     "whatwg-fetch": "^3.0.0"
+  },
+  "scripts": {
+    "start": "dragon-scripts start",
+    "build": "dragon-scripts build",
+    "dev": "npm run start",
+    "test": "jest --notify",
+    "ts": "tslint -c tslint.json 'src/**/*.tsx'"
+  },
+  "devDependencies": {
+    "dragon-scripts": "1.0.9"
   }
 }

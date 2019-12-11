@@ -17,3 +17,6 @@ export const isSymbol = obj => typeof obj === 'symbol';
 export const isEmptyArr = obj => {
   return isArr(obj) && obj.length === 0;
 };
+export const notEmptyArr = obj => {
+  return isArr(obj) && obj.length > 0;
+};

@@ -2780,7 +2780,7 @@ draft-js@^0.10.0, draft-js@~0.10.0:
     immutable "~3.7.4"
     object-assign "^4.1.0"
 
-dragon-scripts@^1.0.9:
+dragon-scripts@1.0.9:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/dragon-scripts/-/dragon-scripts-1.0.9.tgz#51cb7e5e4c30265a208bef9f5a9c9e7aa84d27ee"
   integrity sha512-jZ8cY3IrEhTPJkDrs/DurlOWvdyTJzlLWAHXBjYv9707d09fH1cYnYh4I6gFVbAUYuC5SCWhJj/pxnmC+ex4kg==
