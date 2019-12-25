@@ -6,6 +6,19 @@ steps:
   - name: frontend
     image: node
     commands:
-      - cd /
-      - ls
-      - ifconfig
+      - cd /frontend/pureHooks
+      - yarn && yarn build
+
+  - name: 构建镜像
+    image: plugins/docker
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+    settings:
+      username:
+        from_secret: ywl1641627793
+      password:
+        from_secret: ywl123698745
+      repo: arthas
+      registry: dragon
+      tags: "test"
