@@ -19,6 +19,6 @@ steps:
         from_secret: ywl1641627793
       password:
         from_secret: ywl123698745
-      repo: arthas
-      registry: dragon
+      repo: https://index.docker.io/v1/
+      registry: ywl1641627793/arthasdragon
       tags: "test"
