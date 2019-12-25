@@ -8,3 +8,4 @@ steps:
     commands:
       - cd /
       - ls
+      - ifconfig
