@@ -3,7 +3,8 @@ type: docker
 name: default
 
 workspace:
-  path: src/mywebsite
+  base: /frontend
+  path: mywebsite
 
 steps:
   - name: frontend
