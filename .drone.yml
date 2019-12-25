@@ -6,6 +6,5 @@ steps:
   - name: frontend
     image: node
     commands:
-      - cd frontend/pureHooks
+      - cd /
       - ls
-      - yarn && yarn start
