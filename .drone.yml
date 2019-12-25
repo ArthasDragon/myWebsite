@@ -2,12 +2,9 @@ kind: pipeline
 type: docker
 name: default
 
-workspace:
-  base: /frontend
-  path: mywebsite
-
 steps:
   - name: frontend
     image: node
     commands:
+      - cd frontend
       - yarn
