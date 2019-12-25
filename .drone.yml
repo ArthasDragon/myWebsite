@@ -6,7 +6,7 @@ steps:
   - name: frontend
     image: node
     commands:
-      - cd /frontend/pureHooks
+      - cd frontend/pureHooks
       - yarn && yarn build
 
   - name: 构建镜像
