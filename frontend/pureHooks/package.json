@@ -1,0 +1,39 @@
+{
+  "name": "222",
+  "version": "1.0.0",
+  "license": "MIT",
+  "lint-staged": {
+    "*.{tsx,jsx,js,ts}": [
+      "prettier-eslint --write",
+      "eslint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "antd": "^3.22.0",
+    "babel-polyfill": "^6.26.0",
+    "moment": "^2.24.0",
+    "qs": "^6.8.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-loadable": "^5.5.0",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "scripts": {
+    "start": "dragon-scripts start",
+    "build": "dragon-scripts build",
+    "dev": "npm run start",
+    "test": "jest --notify",
+    "ts": "tslint -c tslint.json 'src/**/*.tsx'"
+  },
+  "devDependencies": {
+    "dragon-scripts": "1.0.9"
+  }
+}
