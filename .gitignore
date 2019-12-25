@@ -1,7 +1,7 @@
 .history
 node_modules
 dist
-.idea
+.git
 
 HELP.md
 target/
