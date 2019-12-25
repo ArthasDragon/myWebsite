@@ -7,4 +7,5 @@ steps:
     image: node
     commands:
       - cd frontend
+      - ls
       - yarn
