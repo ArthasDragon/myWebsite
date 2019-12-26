@@ -7,7 +7,6 @@ steps:
     image: node
     commands:
       - cd frontend/pureHooks
-      - yarn && yarn build
       - cp -rf * /myworkspace
   # - name: 构建镜像
   #   image: plugins/docker
