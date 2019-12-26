@@ -10,6 +10,10 @@ steps:
     image: appleboy/drone-scp
     settings:
       host: arthasdragon.com
+      username:
+        from_secret: scpusername
+      password:
+        from_secret: scppassword
       target:
         - /myworkspace
       source:
