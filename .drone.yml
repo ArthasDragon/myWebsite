@@ -7,17 +7,15 @@ steps:
     image: node
     commands:
       - cd frontend/pureHooks
-      - cp -rf * /myworkspace
-  # - name: 构建镜像
-  #   image: plugins/docker
-  #   volumes:
-  #     - name: docker
-  #       path: /var/run/docker.sock
-  #   settings:
-  #     username:
-  #       from_secret: ywl1641627793
-  #     password:
-  #       from_secret: ywl123698745
-  #     repo: https://index.docker.io/v1/
-  #     registry: ywl1641627793/arthasdragon
-  #     tags: "test"
+  - name: 构建镜像
+    image: plugins/docker
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+    settings:
+      username:
+        from_secret: ywl1641627793
+      password:
+        from_secret: ywl123698745
+      repo: ywl1641627793/arthasdragon
+      tags: "test"
