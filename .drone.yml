@@ -14,8 +14,8 @@ steps:
         path: /var/run/docker.sock
     settings:
       username:
-        from_secret: ywldragon
+        from_secret: dockername
       password:
-        from_secret: ywl123698745
+        from_secret: dockerpassword
       repo: ywldragon/frontend
       tags: "test"
