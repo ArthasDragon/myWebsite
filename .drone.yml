@@ -9,7 +9,7 @@ steps:
 
   - name: test
     commands:
-      - ll
+      - ll -a
   # - name: 构建镜像
   #   image: plugins/docker
   #   volumes:
