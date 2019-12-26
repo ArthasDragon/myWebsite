@@ -2,24 +2,14 @@ kind: pipeline
 name: frontend
 
 steps:
-  # - name: frontend
-  #   image: node
-  #   commands:
-  #     - ls
+  - name: frontend
+    image: ywldragon/frontend
+    commands:
+      - ls
 
-  - name: scp files
-    image: appleboy/drone-scp
-    settings:
-      host: arthasdragon.com
-      username:
-        from_secret: scpusername
-      password:
-        from_secret: scppassword
-      port: 22
-      target:
-        - /myworkspace
-      source:
-        - /frontend/pureHooks/src
+  - name: test
+    commands:
+      - ll
   # - name: 构建镜像
   #   image: plugins/docker
   #   volumes:
