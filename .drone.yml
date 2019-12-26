@@ -6,7 +6,6 @@ steps:
   #   image: node
   #   commands:
   #     - ls
-
   - name: scp files
     image: appleboy/drone-scp
     settings:
