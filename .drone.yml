@@ -4,18 +4,18 @@ name: default
 
 steps:
   - name: frontend
-    image: node
-    commands:
-      - cd frontend/pureHooks
-  - name: 构建镜像
-    image: plugins/docker
-    volumes:
-      - name: docker
-        path: /var/run/docker.sock
-    settings:
-      username:
-        from_secret: ywl1641627793
-      password:
-        from_secret: ywl123698745
-      repo: ywl1641627793/arthasdragon
-      tags: "test"
+    image: golang
+  #   commands:
+  #     - cd frontend/pureHooks
+  # - name: 构建镜像
+  #   image: plugins/docker
+  #   volumes:
+  #     - name: docker
+  #       path: /var/run/docker.sock
+  #   settings:
+  #     username:
+  #       from_secret: ywl1641627793
+  #     password:
+  #       from_secret: ywl123698745
+  #     repo: ywl1641627793/arthasdragon
+  #     tags: "test"
