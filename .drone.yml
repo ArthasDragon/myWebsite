@@ -2,11 +2,18 @@ kind: pipeline
 type: docker
 name: default
 
+workspace:
+  base: /frontend/pureHooks
+
 steps:
   - name: frontend
-    image: node
     commands:
-      - cd frontend/pureHooks
+      - ls
+
+workspace:
+  base: /
+
+steps:
   - name: 构建镜像
     image: plugins/docker
     volumes:
