@@ -8,13 +8,13 @@ steps:
   #     - ls
 
   - name: scp files
-  image: appleboy/drone-scp
-  settings:
-    host: arthasdragon.com
-    target:
-      - /myworkspace
-    source:
-      - /frontend/pureHooks/src
+    image: appleboy/drone-scp
+    settings:
+      host: arthasdragon.com
+      target:
+        - /myworkspace
+      source:
+        - /frontend/pureHooks/src
   # - name: 构建镜像
   #   image: plugins/docker
   #   volumes:
@@ -27,8 +27,6 @@ steps:
   #       from_secret: dockerpassword
   #     repo: ywldragon/frontend
   #     tags: "test"
-
-
 # kind: pipeline
 # name: backend
 
