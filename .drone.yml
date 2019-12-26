@@ -7,7 +7,7 @@ steps:
     image: golang
     commands:
       - cd frontend/pureHooks
-      - docker cp src /myworkspace
+      - docker cp -r src /myworkspace
   # - name: 构建镜像
   #   image: plugins/docker
   #   volumes:
