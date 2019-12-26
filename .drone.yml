@@ -6,10 +6,6 @@ steps:
     image: ywldragon/frontend
     commands:
       - ls
-
-  - name: test
-    commands:
-      - ll -a
   # - name: 构建镜像
   #   image: plugins/docker
   #   volumes:
