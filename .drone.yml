@@ -14,6 +14,7 @@ steps:
         from_secret: scpusername
       password:
         from_secret: scppassword
+      port: 22
       target:
         - /myworkspace
       source:
