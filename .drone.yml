@@ -1,16 +1,42 @@
 kind: pipeline
-type: docker
-name: default
-
-workspace:
-  base: /frontend/pureHooks
+name: frontend
 
 steps:
-  - name: frontend
-    image: node
-    commands:
-      - ls
+  # - name: frontend
+  #   image: node
+  #   commands:
+  #     - ls
+
+  - name: scp files
+  image: appleboy/drone-scp
+  settings:
+    host: arthasdragon.com
+    target:
+      - /myworkspace
+    source:
+      - /frontend/pureHooks/src
+  # - name: 构建镜像
+  #   image: plugins/docker
+  #   volumes:
+  #     - name: docker
+  #       path: /var/run/docker.sock
+  #   settings:
+  #     username:
+  #       from_secret: dockername
+  #     password:
+  #       from_secret: dockerpassword
+  #     repo: ywldragon/frontend
+  #     tags: "test"
+
+
+# kind: pipeline
+# name: backend
+
 # steps:
+#   - name: frontend
+#     image: node
+#     commands:
+#       - ls
 #   - name: 构建镜像
 #     image: plugins/docker
 #     volumes:
@@ -21,5 +47,5 @@ steps:
 #         from_secret: dockername
 #       password:
 #         from_secret: dockerpassword
-#       repo: ywldragon/frontend
+#       repo: ywldragon/backend
 #       tags: "test"
