@@ -10,20 +10,16 @@ steps:
     image: node
     commands:
       - ls
-
-workspace:
-  base: 
-
-steps:
-  - name: 构建镜像
-    image: plugins/docker
-    volumes:
-      - name: docker
-        path: /var/run/docker.sock
-    settings:
-      username:
-        from_secret: dockername
-      password:
-        from_secret: dockerpassword
-      repo: ywldragon/frontend
-      tags: "test"
+# steps:
+#   - name: 构建镜像
+#     image: plugins/docker
+#     volumes:
+#       - name: docker
+#         path: /var/run/docker.sock
+#     settings:
+#       username:
+#         from_secret: dockername
+#       password:
+#         from_secret: dockerpassword
+#       repo: ywldragon/frontend
+#       tags: "test"
