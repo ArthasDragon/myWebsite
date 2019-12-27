@@ -33,6 +33,6 @@
     "ts": "tslint -c tslint.json 'src/**/*.tsx'"
   },
   "devDependencies": {
-    "dragon-scripts": "1.0.9"
+    "dragon-scripts": "1.0.10"
   }
 }

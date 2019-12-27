@@ -2787,10 +2787,10 @@ draft-js@^0.10.0, draft-js@~0.10.0:
     immutable "~3.7.4"
     object-assign "^4.1.0"
 
-dragon-scripts@1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/dragon-scripts/-/dragon-scripts-1.0.9.tgz#51cb7e5e4c30265a208bef9f5a9c9e7aa84d27ee"
-  integrity sha512-jZ8cY3IrEhTPJkDrs/DurlOWvdyTJzlLWAHXBjYv9707d09fH1cYnYh4I6gFVbAUYuC5SCWhJj/pxnmC+ex4kg==
+dragon-scripts@1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/dragon-scripts/-/dragon-scripts-1.0.10.tgz#93b2c32be3faa3cfd1d79e4f33091244cf247e9e"
+  integrity sha512-w6sCXGz62x+IuusQC6zln7ikAIxC4u8Qpg1YyRxA09NHBnFTx8ghJOxbmOvlcCCDvB40vYeQlYNM0TpakNVk7A==
   dependencies:
     "@babel/core" "^7.2.2"
     "@babel/plugin-syntax-dynamic-import" "^7.7.4"

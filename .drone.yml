@@ -3,7 +3,7 @@ name: frontend
 
 steps:
   - name: frontend
-    image: ywldragon/frontend
+    image: ywldragon/frontend:initial
     commands:
       - ls
   # - name: 构建镜像
@@ -18,23 +18,3 @@ steps:
   #       from_secret: dockerpassword
   #     repo: ywldragon/frontend
   #     tags: "test"
-# kind: pipeline
-# name: backend
-
-# steps:
-#   - name: frontend
-#     image: node
-#     commands:
-#       - ls
-#   - name: 构建镜像
-#     image: plugins/docker
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-#     settings:
-#       username:
-#         from_secret: dockername
-#       password:
-#         from_secret: dockerpassword
-#       repo: ywldragon/backend
-#       tags: "test"
