@@ -5,16 +5,26 @@ steps:
   - name: frontend
     image: ywldragon/frontend:initial
     commands:
-      - ls
-  # - name: 构建镜像
-  #   image: plugins/docker
-  #   volumes:
-  #     - name: docker
-  #       path: /var/run/docker.sock
-  #   settings:
-  #     username:
-  #       from_secret: dockername
-  #     password:
-  #       from_secret: dockerpassword
-  #     repo: ywldragon/frontend
-  #     tags: "test"
+      - cd frontend/pureHooks
+      - yarn && yarn build
+      - cp -r frontend/pureHooks/dist backend/java/src/main/resources/mywebsite
+
+  - name: backend
+    image: ywldragon/backend:centos_java8_mysql_maven
+    commands:
+      - cd backend/java
+      - mvn clean install
+      - mvn clean package
+      - java -jar target/mywebsite-0.0.1-SNAPSHOT.jar
+  - name: 构建镜像
+    image: plugins/docker
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+    settings:
+      username:
+        from_secret: dockername
+      password:
+        from_secret: dockerpassword
+      repo: ywldragon/mywebsite
+      tags: "mywebsite build"
