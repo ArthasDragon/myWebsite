@@ -6,7 +6,7 @@ steps:
     image: ywldragon/frontend:initial
     commands:
       - cd frontend/pureHooks
-      - cd /
+      - cd /drone/src
       - ls
       # - yarn && yarn build
       # - rm -rf /backend/java/src/main/resources/mywebsite/**
