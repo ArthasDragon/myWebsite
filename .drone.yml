@@ -7,7 +7,8 @@ steps:
     commands:
       - cd frontend/pureHooks
       - yarn && yarn build
-      - cp -r /frontend/pureHooks/dist /backend/java/src/main/resources/mywebsite
+      - rm -rf /backend/java/src/main/resources/mywebsite/**
+      - cp -r /frontend/pureHooks/dist/ /backend/java/src/main/resources/mywebsite/
 
   - name: backend
     image: ywldragon/backend:centos_java8_mysql_maven
