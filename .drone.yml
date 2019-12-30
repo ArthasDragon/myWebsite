@@ -28,4 +28,6 @@ steps:
       password:
         from_secret: dockerpassword
       repo: ywldragon/mywebsite
-      tags: "mywebsite build"
+      tags:
+        - latest
+        - "build"
