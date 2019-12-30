@@ -1,6 +1,6 @@
 FROM ywldragon/mywebsite:intact
 
-COPY /drone/src/backend/java /mywebsite/backend
+COPY /backend/java /mywebsite/backend
 
 EXPOSE 1314
 
