@@ -1,4 +1,4 @@
-FROM ywldragon/mywebsite:intact
+FROM ywldragon/mywebsite:latest
 
 COPY ./backend/java /mywebsite/backend
 

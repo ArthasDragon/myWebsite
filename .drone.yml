@@ -31,3 +31,7 @@ steps:
       tags:
         - latest
         - "build"
+
+  - name: 启动镜像
+    image: ywldragon/mywebsite:latest
+    detach: true
