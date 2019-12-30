@@ -11,7 +11,7 @@ steps:
       - cp -r /drone/src/frontend/pureHooks/dist/ /drone/src/backend/java/src/main/resources/mywebsite/
 
   - name: backend
-    image: ywldragon/backend:centos_java8_mysql_maven
+    image: ywldragon/backend:intact
     commands:
       - cd /drone/src/backend/java
       - mvn clean install

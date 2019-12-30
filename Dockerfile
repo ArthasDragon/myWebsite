@@ -1,7 +1,7 @@
-FROM ywldragon/backend:centos_java8_mysql_maven
+FROM ywldragon/mywebsite:intact
 
-COPY /backend/java /workspace
+COPY /drone/src/backend/java /mywebsite/backend
 
 EXPOSE 1314
 
-CMD [ "java", "-jar","/workspace/target/mywebsite-0.0.1-SNAPSHOT.jar" ]
+ENTRYPOINT [ "java", "-jar","/mywebsite/backend/java/target/mywebsite-0.0.1-SNAPSHOT.jar" ]
