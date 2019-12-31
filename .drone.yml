@@ -13,8 +13,6 @@ steps:
   - name: backend
     image: ywldragon/backend:intact
     commands:
-      - cd /drone/src/backend/java/src/main/resources/mywebsite/dist
-      - vi index.html
       - cd /drone/src/backend/java
       - mvn clean install
       - mvn clean package

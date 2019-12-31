@@ -1,6 +1,6 @@
 FROM ywldragon/mywebsite:latest
 
-COPY ./backend/java /mywebsite/backend
+COPY ./backend/java /mywebsite/backend/java
 
 EXPOSE 1314
 
