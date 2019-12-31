@@ -11,6 +11,7 @@ steps:
       - ls /drone/src/backend/java/src/main/resources/mywebsite/
       - cp -r /drone/src/frontend/pureHooks/dist/ /drone/src/backend/java/src/main/resources/mywebsite/
       - ls /drone/src/backend/java/src/main/resources/mywebsite/
+      - vi /drone/src/frontend/pureHooks/src/pages/Home/index.tsx
 
   - name: backend
     image: ywldragon/backend:intact
