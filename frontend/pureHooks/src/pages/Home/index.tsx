@@ -27,7 +27,7 @@ class Home extends React.Component<Props> {
           <div className="menu">
             <Breadcrumb>
               <Breadcrumb.Item>
-                <Link to="/gallery">gallery5</Link>
+                <Link to="/gallery">gallery</Link>
               </Breadcrumb.Item>
               <Breadcrumb.Item>
                 <Link to="/gallery">bodybuilding</Link>
