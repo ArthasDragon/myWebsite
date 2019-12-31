@@ -4,7 +4,6 @@ name: mywebsite_build
 steps:
   - name: frontend
     image: ywldragon/frontend:initial
-    privileged: true
     commands:
       - cd /drone/src/frontend/pureHooks
       - yarn && yarn build
