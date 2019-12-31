@@ -5,12 +5,11 @@ steps:
   - name: frontend
     image: ywldragon/frontend:initial
     commands:
-      - ls /drone/src/backend/java/src/main/resources/mywebsite/
       - cd /drone/src/frontend/pureHooks
       - yarn && yarn build
-      - rm -rf /drone/src/backend/java/src/main/resources/mywebsite/**
+      - rm -rf /drone/src/backend/java/src/main/resources/mywebsite/dist/**
       - mkdir /drone/src/backend/java/src/main/resources/mywebsite/dist/
-      - cp -r /drone/src/frontend/pureHooks/dist/ /drone/src/backend/java/src/main/resources/mywebsite/dist/
+      - cp -rf /drone/src/frontend/pureHooks/dist/ /drone/src/backend/java/src/main/resources/mywebsite/dist/
 
   - name: backend
     image: ywldragon/backend:env
