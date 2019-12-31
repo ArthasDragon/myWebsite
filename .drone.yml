@@ -14,6 +14,7 @@ steps:
     image: ywldragon/backend:env
     commands:
       - cd /drone/src/backend/java
+      - ls /drone/src/backend/java/src/main/resources/mywebsite/
       - mvn clean install
       - mvn clean package
 
