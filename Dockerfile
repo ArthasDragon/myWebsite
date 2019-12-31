@@ -1,4 +1,4 @@
-FROM ywldragon/mywebsite:latest
+FROM ywldragon/mywebsite:env
 
 COPY ./backend/java /mywebsite/backend/java
 
