@@ -8,7 +8,9 @@ steps:
       - cd /drone/src/frontend/pureHooks
       - yarn && yarn build
       - rm -rf /drone/src/backend/java/src/main/resources/mywebsite/**
+      - ls /drone/src/backend/java/src/main/resources/mywebsite/
       - cp -r /drone/src/frontend/pureHooks/dist/ /drone/src/backend/java/src/main/resources/mywebsite/
+      - ls /drone/src/backend/java/src/main/resources/mywebsite/
 
   - name: backend
     image: ywldragon/backend:intact
