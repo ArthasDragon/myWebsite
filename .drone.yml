@@ -4,11 +4,12 @@ name: mywebsite_build
 steps:
   - name: frontend
     image: node
+    privileged: true
     commands:
       - cd /drone/src/frontend/pureHooks
       - yarn && yarn build
       - rm -rf /drone/src/backend/java/src/main/resources/mywebsite/**
-      - cp -rf /drone/src/frontend/pureHooks/dist/ /drone/src/backend/java/src/main/resources/mywebsite/dist/
+      - sudo cp -rf /drone/src/frontend/pureHooks/dist/ /drone/src/backend/java/src/main/resources/mywebsite/dist/
 
   - name: backend
     image: ywldragon/backend:env
