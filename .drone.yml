@@ -7,8 +7,7 @@ steps:
     commands:
       - cd /drone/src/frontend/pureHooks
       - yarn && yarn build
-      - rm -rf /drone/src/backend/java/src/main/resources/mywebsite/dist/**
-      - mkdir /drone/src/backend/java/src/main/resources/mywebsite/dist/
+      - rm -rf /drone/src/backend/java/src/main/resources/mywebsite/dist
       - cp -rf /drone/src/frontend/pureHooks/dist/ /drone/src/backend/java/src/main/resources/mywebsite/dist/
 
   - name: backend
