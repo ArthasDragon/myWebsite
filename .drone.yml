@@ -3,7 +3,7 @@ name: mywebsite_build
 
 steps:
   - name: frontend
-    image: ywldragon/frontend:initial
+    image: node
     commands:
       - cd /drone/src/frontend/pureHooks
       - yarn && yarn build
@@ -11,10 +11,9 @@ steps:
       - ls /drone/src/backend/java/src/main/resources/mywebsite/
       - cp -r /drone/src/frontend/pureHooks/dist/ /drone/src/backend/java/src/main/resources/mywebsite/
       - ls /drone/src/backend/java/src/main/resources/mywebsite/
-      - vi /drone/src/frontend/pureHooks/src/pages/Home/index.tsx
 
   - name: backend
-    image: ywldragon/backend:intact
+    image: ywldragon/backend:centos_java8_mysql_maven
     commands:
       - cd /drone/src/backend/java
       - mvn clean install
