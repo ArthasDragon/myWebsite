@@ -8,13 +8,12 @@ steps:
       - cd /drone/src/frontend/pureHooks
       - yarn && yarn build
       - rm -rf /drone/src/backend/java/src/main/resources/mywebsite/**
-      - cp -r /drone/src/frontend/pureHooks/dist/ /drone/src/backend/java/src/main/resources/mywebsite/
+      - cp -r /drone/src/frontend/pureHooks/dist/ /drone/src/backend/java/src/main/resources/mywebsite/dist/
 
   - name: backend
     image: ywldragon/backend:env
     commands:
       - cd /drone/src/backend/java
-      - ls /drone/src/backend/java/src/main/resources/mywebsite/
       - mvn clean install
       - mvn clean package
 
