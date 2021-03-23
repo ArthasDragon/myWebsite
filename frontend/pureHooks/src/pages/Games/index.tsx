@@ -17,7 +17,12 @@ class Games extends React.Component<Props> {
       <div className="games">
         <div className="content">
           {gamesData.map(({ name, desc, cover }, index) => (
-            <Card key={index} className="game_card" title={name} cover={<img src={cover} />}>
+            <Card
+              key={index}
+              className="game_card"
+              title={name}
+              cover={<img style={{ width: '100%' }} src={cover} />}
+            >
               <Meta
                 description={
                   <Tooltip placement="rightTop" className="desc" title={desc}>
