@@ -1,8 +1,10 @@
 import * as React from 'react';
-import { Breadcrumb } from 'antd';
+import { Breadcrumb, Button } from 'antd';
 // import { RouteWithSubRoutes } from '@util/index';
 import { Link } from 'react-router-dom';
 import './home.less';
+
+import { addUser } from '@/api/home';
 
 const SIGN = require('@/assets/imgs/sign.png');
 
@@ -13,6 +15,13 @@ interface Props {
 class Home extends React.Component<Props> {
   constructor(props) {
     super(props);
+  }
+  async addUser() {
+    const res = await addUser({
+      name: 222,
+      email: 'bbb',
+    });
+    console.log(res, 111);
   }
   public render() {
     return (
@@ -27,6 +36,7 @@ class Home extends React.Component<Props> {
           <div className="menu">
             <Breadcrumb>
               <Breadcrumb.Item>
+                <Button onClick={this.addUser}>add</Button>
                 <Link to="/gallery">gallery</Link>
               </Breadcrumb.Item>
               <Breadcrumb.Item>

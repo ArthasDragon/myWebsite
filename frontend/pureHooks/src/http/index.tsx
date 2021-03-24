@@ -3,6 +3,11 @@ import { omit } from '@util/index';
 import { formatConfig } from './formatConfig';
 import { message } from 'antd';
 
+/**
+ *
+ * @param u 请求地址
+ * @param c 配置参数
+ */
 const uniHttp = async (u, c) => {
   const { dataType, autoShowError } = c;
 
